@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ToDoDbContext>(options =>
 // 2. הגדרת CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddDefaultPolicy( policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
