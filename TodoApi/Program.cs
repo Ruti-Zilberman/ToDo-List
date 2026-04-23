@@ -28,6 +28,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Todo API", Description = "Keep track of your tasks", Version = "v1" });
 });
 
+
 var app = builder.Build();
 
 // 4. הפעלת Swagger - יוצג רק בסביבת פיתוח (או תמיד, לבחירתך)
@@ -39,7 +40,7 @@ app.UseSwaggerUI(c =>
 });
 
 // 5. הפעלת ה-CORS
-app.UseCors("AllowAll");
+app.UseCors();
 
 // --- הנתיבים (Routes) ---
 
