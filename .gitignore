@@ -20,7 +20,7 @@ yarn-error.log*
 .pnp.js
 
 # תיקיית הבנייה של הלקוח
-build/
+
 dist/
 
 # קבצי סביבה (Environment Variables)
