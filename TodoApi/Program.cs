@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ToDoDbContext>(options =>
 // 2. הגדרת CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddDefaultPolicy( policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
@@ -40,7 +40,7 @@ app.UseSwaggerUI(c =>
 });
 
 // 5. הפעלת ה-CORS
-app.UseCors("AllowAll");
+app.UseCors();
 
 // --- הנתיבים (Routes) ---
 
