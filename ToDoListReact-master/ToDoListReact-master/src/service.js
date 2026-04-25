@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiUrl = "https://todo-list-server-x3w3.onrender.com"; // ודאי שזה הפורט הנכון מה-Visual Studio
 // במקום הכתובת של onrender.com
-// const apiUrl = "http://localhost:5006";
+
 axios.defaults.baseURL = `${apiUrl}/items`;
 
 // הוספת ה-Interceptor (כמו שעשינו קודם)
