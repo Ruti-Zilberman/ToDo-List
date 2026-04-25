@@ -31,6 +31,13 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// יצירת הטבלה באופן אוטומטי אם היא לא קיימת
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ToDoDbContext>();
+    context.Database.EnsureCreated();
+}
 // 4. הפעלת Swagger - יוצג רק בסביבת פיתוח (או תמיד, לבחירתך)
 // כדי שזה יעבוד, פשוט הריצי את האפליקציה וגשי לכתובת /swagger
 app.UseSwagger();
